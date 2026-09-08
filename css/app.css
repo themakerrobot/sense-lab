@@ -1,4 +1,4 @@
-/* 센스 랩 전용 스타일 — 공통 규격은 css/ui.css (파이보 랩과 동일) */
+/* Sense Lab 전용 스타일 — 공통 규격은 css/ui.css (파이보 랩과 동일) */
 /* 패널·단계·카드 등은 파이보 랩 분류툴(classify.html)의 규격을 그대로 옮겼다 */
 
 html,body{height:100%;margin:0;overflow:hidden}
@@ -49,8 +49,9 @@ body{display:flex;flex-direction:column}
 .db.danger:hover{border-color:var(--warn);color:var(--warn);background:transparent}
 
 /* ── 소스(무엇을 볼까) 선택 ── */
-.srcpick{display:flex;gap:6px}
-.srcpick .db{flex:1;justify-content:center;padding:9px 6px}
+/* 2×2 그리드 — 영어처럼 라벨이 길어도 잘리지 않는다 */
+.srcpick{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.srcpick .db{justify-content:center;padding:9px 6px;min-width:0}
 .srcpick .db.on{background:var(--acc-soft);border-color:var(--acc);color:var(--acc-ink)}
 
 /* ── 종류(클래스) 카드 (분류툴과 동일) ── */
