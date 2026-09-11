@@ -2,10 +2,10 @@
 
 **Teach an AI to see and hear you — right in the browser.**
 
-Sense Lab is a classroom web app for kids. Point the webcam at yourself,
-collect examples of your hand signs, faces, or body poses, and train a small
-AI in about one second. Then test it, build rules with it, and play a
-step-by-step gesture game.
+Sense Lab is a classroom web app for kids. Show the webcam a hand sign, a
+face, or a body pose — or clap and whistle into the mic — collect a few
+examples, and train a small AI in about one second. Then test it, build
+rules with it, and play a step-by-step signal game.
 
 There is nothing to install and no sign-up. Everything runs inside the
 browser — **the camera video and mic audio never leave your computer.**
@@ -19,6 +19,9 @@ browser — **the camera video and mic audio never leave your computer.**
 
 1. Choose what the AI should watch: **hand, face, body — or sound**
    (sound uses the microphone: teach it claps, whistles, or spoken words).
+   Hand and body ask one more thing: **one hand / two hands**, and
+   **upper body / whole body** — pick the wider one for two-handed moves
+   or dancing.
 2. Make "kinds" — the things you want it to tell apart
    (e.g. rock / paper / scissors).
 3. Turn on the camera, pick a kind, and **hold the button** to collect
@@ -50,13 +53,13 @@ Rules can mix trained kinds with built-in signals, joined by ALL / ANY.
 There is also **background fun** — the AI cuts you out of the background
 (erase, blur, green screen), showing pixel-level AI at work.
 
-## Step Game — gestures in order
+## Step Game — signals in order
 
 ![Step Game](docs/stepgame.png)
 
-Build a flow chart of moves: *paper → mouth open → scissors*. Hold each
-move for a moment to pass a step and reach **Success!** — a secret gesture
-password. Steps can use trained kinds and built-in signals alike.
+Build a flow chart of signals: *paper → mouth open → clap*. Hold each one
+for a moment to pass a step and reach **Success!** — a secret password made
+of moves and sounds. Steps can use trained kinds and built-in signals alike.
 
 ## Models — keep your work
 
@@ -84,9 +87,10 @@ PCs that reset on reboot.
 
 **브라우저에서 바로, 나의 몸짓과 소리를 AI에게 가르쳐요.**
 
-Sense Lab은 어린이를 위한 수업용 웹앱입니다. 웹캠 앞에서 손 모양·표정·몸
-동작의 예시를 모으면, 약 1초 만에 작은 AI가 학습됩니다. 배운 모델을
-시험하고, 규칙으로 엮고, 순서 놀이로 게임도 만들 수 있습니다.
+Sense Lab은 어린이를 위한 수업용 웹앱입니다. 웹캠에 손 모양·표정·몸 동작을
+보여 주거나 마이크에 소리를 내어 예시를 모으면, 약 1초 만에 작은 AI가
+학습됩니다. 배운 모델을 시험하고, 규칙으로 엮고, 순서 놀이로 게임도 만들 수
+있습니다.
 
 설치도 가입도 없습니다. 모든 것이 브라우저 안에서 돌아가고, **찍은 영상과
 들리는 소리는 컴퓨터 밖으로 나가지 않습니다.**
@@ -95,6 +99,8 @@ Sense Lab은 어린이를 위한 수업용 웹앱입니다. 웹캠 앞에서 손
 
 1. 무엇을 보고 배울지 고릅니다: **손, 얼굴, 포즈 — 그리고 소리**
    (소리는 마이크를 써요: 박수, 휘파람, 말소리를 가르칠 수 있어요).
+   손과 포즈는 하나 더 고릅니다: **한 손 / 두 손**, **상반신 / 전신** —
+   두 손을 쓰는 동작이나 춤이면 넓은 쪽을 고르세요.
 2. 맞히고 싶은 **종류**를 만듭니다 (예: 가위 / 바위 / 보).
 3. 카메라를 켜고 종류를 고른 뒤, **버튼을 꾹 눌러** 예시를 모읍니다.
    종류당 20~40장이면 충분합니다.
@@ -126,9 +132,9 @@ Sense Lab은 어린이를 위한 수업용 웹앱입니다. 웹캠 앞에서 손
 
 ## 순서 놀이 — 동작을 순서대로
 
-동작 순서도를 만듭니다: *보 → 입 벌리기 → 가위*. 각 동작을 잠깐 유지하면
-한 칸씩 내려가고, 끝까지 가면 **성공!** — 나만의 비밀 동작 암호가 됩니다.
-단계에는 배운 종류와 그냥 되는 것을 모두 쓸 수 있어요.
+순서도를 만듭니다: *보 → 입 벌리기 → 박수*. 각 단계를 잠깐 유지하면 한
+칸씩 내려가고, 끝까지 가면 **성공!** — 동작과 소리로 만든 나만의 비밀
+암호가 됩니다. 단계에는 배운 종류와 그냥 되는 것을 모두 쓸 수 있어요.
 
 ## 보관함 — 만든 것 지키기
 
