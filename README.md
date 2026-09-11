@@ -11,6 +11,7 @@ Sense Lab은 어린이를 위한 수업용 웹앱입니다. 웹캠에 손 모양
 들리는 소리는 컴퓨터 밖으로 나가지 않습니다.**
 
 > 헤더의 **EN** 버튼을 누르면 화면 전체가 영어로 바뀝니다.
+> 화면별 사용법은 **[사용 설명서](docs/MANUAL.md)** 에 그림으로 정리해 두었어요.
 
 ## 학습실 — 나만의 AI 모델 만들기
 
@@ -94,6 +95,7 @@ browser — **the camera video and mic audio never leave your computer.**
 
 > The screenshots below show the Korean UI. Press the **EN** button in the
 > header to switch the whole app to English.
+> A picture-first walkthrough lives in the [manual](docs/MANUAL.md) (Korean).
 
 ## Teach — make your own AI model
 
