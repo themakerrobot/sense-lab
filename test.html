@@ -7,11 +7,10 @@
 <link rel="icon" type="image/png" href="assets/img/favicon.png">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#FBF7EF">
-<link rel="stylesheet" href="assets/fonts/pretendard.css?v=24">
-<link rel="stylesheet" href="css/all.min.css?v=24">
-<link rel="stylesheet" href="css/ui.css?v=24">
-<link rel="stylesheet" href="css/theme-maker.css?v=24">
-<link rel="stylesheet" href="css/app.css?v=24">
+<link rel="stylesheet" href="assets/fonts/pretendard.css?v=25">
+<link rel="stylesheet" href="css/all.min.css?v=25">
+<link rel="stylesheet" href="css/maker-ui.css?v=25">
+<link rel="stylesheet" href="css/app.css?v=25">
 </head>
 <body>
 
@@ -24,9 +23,9 @@
   <span style="font-size:11px;color:var(--ink3);font-weight:600;align-self:center" id="modeHint">보고, 시험하고, 규칙도 만들어요</span>
 </div>
 
-<div id="glMain">
+<div class="mk-main" id="glMain">
 
-  <div class="pan" id="panL">
+  <div class="pan pan-side" id="panL">
     <div class="ph"><i class="fa-solid fa-list"></i>무엇을 볼까요?</div>
     <div class="pb">
       <div id="pickAll">
@@ -65,7 +64,7 @@
     </div>
   </div>
 
-  <div class="pan" id="panC">
+  <div class="pan pan-wide" id="panC">
     <div class="ph"><i class="fa-solid fa-camera"></i>카메라</div>
     <div class="pb">
       <div class="row" style="margin-bottom:10px">
@@ -82,7 +81,7 @@
     </div>
   </div>
 
-  <div class="pan" id="panR">
+  <div class="pan pan-out" id="panR">
     <div class="ph"><i class="fa-solid fa-chart-simple"></i>AI의 답</div>
     <div class="pb">
       <div class="answer idk" id="answer" style="display:none">카메라를 켜 주세요</div>

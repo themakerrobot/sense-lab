@@ -35,8 +35,7 @@ Go 서버(`pibo-server` 계열) 사용 시 `mime.AddExtensionType` 로 명시 �
 ```
 index.html / test.html / storage.html
 css/
-  ui.css             공통 UI 규격 (파이보 랩과 동일)
-  theme-maker.css    학습지 테마 (파이보 랩과 동일)
+  maker-ui.css       공용 디자인 킷 (design/maker-ui.css 복사본 — 수정 금지)
   app.css            이 서비스 전용
 lib/
   nav.js             헤더/탭/전체화면
@@ -58,7 +57,10 @@ models/              hand / face / pose_lite .task + selfie_segmenter(배경) ·
 assets/fonts/        Pretendard (셀프호스팅)
 assets/img/          캐릭터·로고·앱 아이콘
 docs/                README 용 화면 캡처
-design/              공용 디자인 킷 (maker-ui.css + 미리보기)
+design/              공용 디자인 킷 원본 (maker-ui.css + 미리보기)
+                     css/maker-ui.css 는 이 파일의 복사본이다.
+                     공통 규격을 바꿀 때는 design/ 을 고치고 css/ 로 복사한다.
+                     자매 서비스(teach-lab 등)에도 같은 파일이 들어 있다.
 ```
 
 ## 소리: 창 길이를 반드시 15600 샘플로
