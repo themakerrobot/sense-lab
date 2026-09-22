@@ -41,7 +41,7 @@ css/
 lib/
   nav.js             헤더/탭/전체화면
   landmarker.js      MediaPipe 로드/전환/추론 (GPU 실패 시 CPU 폴백)
-  sound.js           마이크 + YAMNet 소리 분류 (16kHz, 250ms 주기, 521차원)
+  sound.js           마이크 + YAMNet 소리 분류 (16kHz, 250ms 주기, 521차원, 한 창 15600 샘플)
   features.js        특징 벡터 전처리 + 내장 신호 (손 63 / 얼굴 52 / 포즈 75 / 소리 521)
   trainer.js         TF.js 분류기 학습 (Dense32-Dropout-Softmax, CPU 백엔드)
   store.js           IndexedDB 저장 + zip 내보내기/불러오기
@@ -60,6 +60,26 @@ assets/img/          캐릭터·로고·앱 아이콘
 docs/                README 용 화면 캡처
 design/              공용 디자인 킷 (maker-ui.css + 미리보기)
 ```
+
+## 소리: 창 길이를 반드시 15600 샘플로
+
+YAMNet 한 창은 **15600 샘플(0.975초)** 이다. 1초(16000)를 통째로 넣으면
+MediaPipe 가 창을 둘로 쪼개는데, 둘째 창은 400샘플만 진짜이고 나머지는 0으로
+채운 꼬리라 **늘 "Silence" 가 1등**으로 나온다. 예전 코드는
+`results[results.length - 1]` 로 **그 꼬리 창을 골라 썼다.**
+
+```
+220Hz 순음을 넣고 잰 것 (헤드리스 크로미움)
+  고치기 전   Silence   0.148      ← 0으로 채운 꼬리 창
+  고친 뒤     Sine wave 0.996      ← 진짜 내용
+```
+
+그래서 링 버퍼를 `0.975 × ctx.sampleRate` 로 잡고 `results[0]` 을 쓴다
+(`lib/sound.js`). 샘플레이트를 16kHz 로 못 맞추는 기기가 있어 초 단위로 계산한다.
+이 창 길이는 `features.js` 의 내장 소리 신호(박수·휘파람·말소리) 판정에도
+그대로 영향을 준다 — 꼬리 창을 쓰면 점수가 전부 0 근처라 아무것도 안 잡힌다.
+
+> 같은 코드가 **teach-lab** 의 `lib/sound.js` 에도 있다. 한쪽을 고치면 저쪽도 본다.
 
 ## 벤더 파일 갱신
 
