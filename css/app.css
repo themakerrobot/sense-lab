@@ -2,7 +2,7 @@
    Sense Lab 전용 스타일
    ═══════════════════════════════════════════════════════════════════
    공통 규격(색·버튼·패널·카드·표·막대·순서도·토스트·헤더)은
-   css/maker-ui.css 에 있다. 그 파일은 themakerrobot/themaker-ui 의 복사본이므로
+   css/themaker-ui.css 에 있다. 그 파일은 themakerrobot/themaker-ui 의 복사본이므로
    여기서 고치지 말 것 — 공통 규격을 바꿔야 하면 그 저장소를 고치고 다시 복사한다.
 
    이 파일에는 Sense Lab 에만 있는 것만 둔다:
