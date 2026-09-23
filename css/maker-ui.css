@@ -98,6 +98,14 @@ header h1 img{height:30px;width:auto;display:block}
   min-width:46px;text-align:center;line-height:1;font-family:inherit;cursor:pointer;
 }
 
+/* 헤더 아이콘 버튼 (도움말 ? · 전체화면) */
+.hbtn{
+  display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;
+  border:1px solid var(--line);border-radius:var(--r-s);background:var(--panel);color:var(--ink2);
+  font-size:13px;cursor:pointer;transition:all .12s;flex-shrink:0;
+}
+.hbtn:hover{border-color:var(--acc);color:var(--acc-ink);background:var(--acc-soft)}
+
 /* ── 4. 단계 표시 · 본문 3단 패널 ── */
 #steps,.steps{display:flex;align-items:center;gap:0;padding:11px 16px;background:var(--panel2);
   border-bottom:1px solid var(--line);flex-shrink:0;overflow-x:auto}

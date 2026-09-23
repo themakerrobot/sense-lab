@@ -7,7 +7,9 @@
 - 백엔드 없음 — 전부 정적 파일. 외부 CDN 금지, 라이브러리·모델 전부 셀프호스팅
 - 최초 로드 후 오프라인 동작
 - 코드·README에 계정명·절대 URL 하드코딩 금지 (조직 이전 대비, 전부 상대경로)
-- 디자인은 자매 서비스(파이보 랩)와 동일 — 공용 규격은 [design/](./design/) 참고
+- 디자인은 자매 서비스와 동일 — 공용 규격은 **[themakerrobot/maker-ui](https://github.com/themakerrobot/maker-ui)** 한 곳에 있다.
+  `css/maker-ui.css` 는 그 저장소 `maker-ui.css` 의 **복사본이다. 직접 고치지 말 것.**
+  고쳐야 하면 킷을 고치고 태그를 올린 뒤 여기로 다시 복사한다 (CI 가 어긋남을 잡는다)
 
 ## 실행
 
@@ -35,7 +37,7 @@ Go 서버(`pibo-server` 계열) 사용 시 `mime.AddExtensionType` 로 명시 �
 ```
 index.html / test.html / storage.html
 css/
-  maker-ui.css       공용 디자인 킷 (design/maker-ui.css 복사본 — 수정 금지)
+  maker-ui.css       공용 디자인 킷 복사본 (themakerrobot/maker-ui — 수정 금지)
   app.css            이 서비스 전용
 lib/
   nav.js             헤더/탭/전체화면
@@ -54,13 +56,10 @@ vendor/
   tfjs/              @tensorflow/tfjs tf.min.js
 models/              hand / face / pose_lite .task + selfie_segmenter(배경) ·
                      yamnet(소리) .tflite
-assets/fonts/        Pretendard (셀프호스팅)
+assets/fonts/        Pretendard (셀프호스팅 — 디자인 킷과 같은 파일)
 assets/img/          캐릭터·로고·앱 아이콘
 docs/                README 용 화면 캡처
-design/              공용 디자인 킷 원본 (maker-ui.css + 미리보기)
-                     css/maker-ui.css 는 이 파일의 복사본이다.
-                     공통 규격을 바꿀 때는 design/ 을 고치고 css/ 로 복사한다.
-                     자매 서비스(teach-lab 등)에도 같은 파일이 들어 있다.
+
 ```
 
 ## 소리: 창 길이를 반드시 15600 샘플로
