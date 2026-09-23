@@ -2,7 +2,7 @@ name: CI
 
 # 손으로 맞춰야 하는 것이 어긋났는지 본다.
 # 지금은 하나뿐이다: css/maker-ui.css 는 공용 디자인 킷
-# (themakerrobot/maker-ui)의 복사본이라, 원본이 바뀌었는데 안 가져오거나
+# (themakerrobot/themaker-ui)의 복사본이라, 원본이 바뀌었는데 안 가져오거나
 # 이쪽에서 몰래 고치면 자매 서비스와 화면이 어긋난다.
 
 on:
@@ -23,7 +23,7 @@ jobs:
       - name: 브라우저 JS
         run: for f in lib/*.js; do [ "$(basename "$f")" = jszip.min.js ] || node --check "$f"; done
 
-# ── 아래 잡은 themakerrobot/maker-ui 저장소가 생기면 주석을 벗긴다 ──
+# ── 아래 잡은 themakerrobot/themaker-ui 저장소가 생기면 주석을 벗긴다 ──
 # (킷 원본이 아직 안 올라가서 지금 켜면 매번 실패한다)
 #  design-kit:
 #    name: 디자인 킷 복사본이 원본과 같은가
@@ -36,10 +36,10 @@ jobs:
 #          # 새 킷을 쓰려면 이 번호를 올리고 파일을 다시 복사한다.
 #          KIT=v1.0.0
 #          curl -sSfL -o /tmp/kit.css \
-#            "https://raw.githubusercontent.com/themakerrobot/maker-ui/$KIT/maker-ui.css"
+#            "https://raw.githubusercontent.com/themakerrobot/themaker-ui/$KIT/maker-ui.css"
 #          if ! diff -u /tmp/kit.css css/maker-ui.css; then
 #            echo "::error::css/maker-ui.css 가 디자인 킷 $KIT 과 다릅니다."
-#            echo "고칠 것이 있으면 themakerrobot/maker-ui 를 고치고 여기로 다시 복사하세요."
+#            echo "고칠 것이 있으면 themakerrobot/themaker-ui 를 고치고 여기로 다시 복사하세요."
 #            exit 1
 #          fi
 #          echo "디자인 킷 $KIT 과 같습니다"
